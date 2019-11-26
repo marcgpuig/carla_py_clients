@@ -1,5 +1,6 @@
 # Additional clients examples for Carla
-A set of Python client examples and utils for https://github.com/carla-simulator/carla
+A set of Python client examples and utils for https://github.com/carla-simulator/carla.
+
 Most of them are intended for data validation and some of them are just simple examples.
 
 ## Usage:
