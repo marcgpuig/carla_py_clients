@@ -74,19 +74,19 @@ def main():
         bp_lb = world.get_blueprint_library()
         imu_bp = bp_lb.filter('sensor.other.imu')[0]
         gnss_bp = bp_lb.filter('sensor.other.gnss')[0]
-        mustang_bp = bp_lb.filter('vehicle.audi.tt')[0]
+        mustang_bp = bp_lb.filter('vehicle.ford.mustang')[0]
 
-        # imu_bp.set_attribute('noise_seed', '10')
+        imu_bp.set_attribute('noise_seed', '10')
 
-        # imu_bp.set_attribute('noise_accel_stddev_x', '0.5')
-        # imu_bp.set_attribute('noise_accel_stddev_y', '0.5')
-        # imu_bp.set_attribute('noise_accel_stddev_z', '0.5')
+        imu_bp.set_attribute('noise_accel_stddev_x', '0.1')
+        imu_bp.set_attribute('noise_accel_stddev_y', '0.1')
+        imu_bp.set_attribute('noise_accel_stddev_z', '0.1')
 
-        # imu_bp.set_attribute('noise_lat_stddev', '0.1')
+        imu_bp.set_attribute('noise_lat_stddev', '0.1')
 
-        # imu_bp.set_attribute('noise_gyro_stddev_x', '0.5')
-        # imu_bp.set_attribute('noise_gyro_stddev_z', '0.5')
-        # imu_bp.set_attribute('noise_gyro_stddev_y', '0.5')
+        imu_bp.set_attribute('noise_gyro_stddev_x', '0.1')
+        imu_bp.set_attribute('noise_gyro_stddev_z', '0.1')
+        imu_bp.set_attribute('noise_gyro_stddev_y', '0.1')
 
         start_location = carla.Transform(carla.Location(-47.7, -83.9, 5.5))
         # start_location = world.get_map().get_spawn_points()[0].location
